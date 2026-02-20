@@ -5,19 +5,19 @@ A production minded Human Activity Recognition system built on PAMAP2 wearable s
 
 Why it matters
 
-    Wearable monitoring needs models that generalize to new people. This project uses subject level splits and GroupKFold validation to avoid leakage and report realistic performance.
+Wearable monitoring needs models that generalize to new people. This project uses subject level splits and GroupKFold validation to avoid leakage and report realistic performance.
 
 How it works
 
-    Windowing: 10 second windows with 50 percent overlap and no label crossing
+Windowing: 10 second windows with 50 percent overlap and no label crossing
 
-    Features: time domain and frequency domain window features
+Features: time domain and frequency domain window features
 
-    Models: ExtraTrees, Random Forest, tuned LinearSVC, plus a PyTorch 1D CNN
+Models: ExtraTrees, Random Forest, tuned LinearSVC, plus a PyTorch 1D CNN
 
-    Evaluation: Macro F1, Balanced Accuracy, confusion matrix analysis on unseen subjects
+Evaluation: Macro F1, Balanced Accuracy, confusion matrix analysis on unseen subjects
 
-    Output: window predictions projected to time aligned records for visualization
+Output: window predictions projected to time aligned records for visualization
 
 Results
 
@@ -26,15 +26,16 @@ The 1D CNN reaches about 0.93 Macro F1 on the same split.
 
 Repo layout
 
-    notebooks: EDA, feature extraction, training, evaluation
+notebooks: EDA, feature extraction, training, evaluation
 
-    artifacts: saved model and feature column list
+artifacts: saved model and feature column list
 
-    build_tableau_csv.py: generates Tableau ready CSV outputs
+build_tableau_csv.py: generates Tableau ready CSV outputs
 
 Quick start
 
 1 Install dependencies
 2 Run the notebook to train models and export artifacts
 3 Generate Tableau CSV with the export script
+
 4 Build the dashboard in Tableau Public
